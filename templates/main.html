@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h1 class="display-4 text-center">Welcome to the Survey Page</h1>
+<h5 class="text-center">{{survey.title}}</h5>
+  <div class="row m-5">
+    <div class="col text-center">
+      <p>{{survey.instructions}}</p>
+      <form action="/begin" method="POST">
+        <button class="btn btn-warning">Start!</button>
+      </form>
+    </div>
+  </div>
+
+{% endblock %}
